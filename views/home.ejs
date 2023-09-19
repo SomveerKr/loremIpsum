@@ -1,0 +1,67 @@
+<!-- header -->
+<%- include('partials/header'); -%>
+
+<!-- Hero Section -->
+<div class="hero-section">
+	
+	<div class="hero-img">
+		<img src="<%= mainPost.featureImgURL %>" alt="feature-img">
+	</div>
+	
+	<div class="hero-content">
+		<p class="hero-alert">Sed venenatis dignissim</p>
+		<h1 class="hero-title"><%= mainPost.postTitle %></h1>
+		<div class="hero-text"><%= mainPost.content[0].substring(0, 230) + " ..." %></div>
+		<div class="read-more-link">
+			<a href="/post">Read Full Article →</a>
+		</div>
+		
+	</div>
+
+	
+
+</div>
+
+<div class="divider-line"></div>
+
+<!-- Blogs/Articles Section -->
+<div class="blogs-section">
+
+	<div class="blog">
+		<div class="blog-img">
+			<img src="/images/blog1.jpg" alt="">
+		</div>
+		<h2 class="blog-title">Lorem, ipsum dolor</h2>
+		<div class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam suscipit quo non modi accusamus...</div>
+		<div class="read-more-link">
+			<a href="">In mollis felis →</a>
+		</div>
+	</div>
+
+	<div class="blog">
+		<div class="blog-img">
+			<img src="/images/blog2.jpg " alt="">
+		</div>
+		<h2 class="blog-title">Lorem, ipsum dolor</h2>
+		<div class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur animi nisi fugiat possimus...</div>
+		<div class="read-more-link">
+			<a href="">In mollis felis →</a>
+		</div>
+	</div>
+
+	<div class="blog">
+		<div class="blog-img">
+			<img src="/images/blog3.jpg" alt="">
+		</div>
+		<h2 class="blog-title">Lorem, ipsum dolor</h2>
+		<div class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugit cupiditate reiciendis? Mollitia repudiandae id cum...</div>
+		<div class="read-more-link">
+			<a href="">In mollis felis →</a>
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- Footer -->
+<%- include('partials/footer'); -%>

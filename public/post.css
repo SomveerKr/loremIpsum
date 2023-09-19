@@ -1,0 +1,53 @@
+.post-section{
+    display: flex;
+    flex-direction: row;
+    padding: 80px;
+    gap: 50px;
+}
+
+.post-headings{
+    max-width: 500px;
+}
+
+.post-img{
+    width: 360px;
+    height: 450px;
+}
+.post-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.head-links-title{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#heading-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+#heading-links a{
+    color: #666;
+}
+
+#heading-links a:hover{
+    color: #333;
+}
+
+
+
+/* Article / Post content section */
+.post{
+    display: flex;
+    flex-direction: column;
+}
+.post-title{
+    font-size: 3.2rem;
+    margin-top: 0px;
+    font-weight: 900;
+}

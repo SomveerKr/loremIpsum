@@ -1,0 +1,93 @@
+
+   
+     
+  
+
+  /* Mine */
+  /* Hero section */
+  .hero-section{
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px; 
+    
+  }
+  
+  .hero-img{
+    width: 320px;
+    height: 380px;
+    
+  }
+  .hero-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    
+  }
+  .hero-content{
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 400px;
+  }
+  .hero-alert{
+    color: rgb(219, 1, 1);
+    font-size: 16px;
+  }
+  .hero-title{
+    line-height: 40px;
+    margin-top: 0;
+   
+  }
+  .read-more-link{
+    margin-top: 10px;
+  }
+  .read-more-link a{
+    color: #333333;
+  }
+  .read-more-link a:hover{
+    color: #666666;
+  }
+
+  .divider-line{
+    padding: 0 80px;
+    background: #222;
+    height: 2px;
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  /* Blogs section */
+  .blogs-section{
+   display: flex;
+   flex-direction: row;
+   padding: 60px 80px;
+  justify-content: space-between;
+   
+  }
+
+  .blog{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 360px;
+  }
+
+  .blog-img{
+    width: 100px;
+    height: 120px;
+  }
+
+  .blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+.blog-title{
+  margin: 10px 0;
+}
+

@@ -1,0 +1,80 @@
+ /* Define the body style */
+ body {
+    display: flex;
+    flex-direction: column;
+   
+   
+    margin: 0 ;
+    font-family: 'EB Garamond', serif;
+    font-size: 21px;
+    background-color: #FFFFE5;
+    line-height: 1.5;
+    color: #333333;
+    font-weight: 400;
+    /* overflow-x: none; */
+    box-sizing: border-box;
+  }
+
+      
+      
+      
+      
+      
+      /* Define the navigation style */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 20px 80px;
+       
+        background: #fff;
+        transition: all ease .65s;
+        z-index: 100;
+        box-sizing: border-box;
+      }
+      /* When page scrolls */
+      nav.scroll {
+        padding: 10px 80px;
+        position: fixed;
+        width: 100%;
+        
+      }
+      .nav-logo{
+        font-weight: 900;
+        font-size: 40px;
+      }
+
+      .nav-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        gap: 25px;
+      }
+  
+      /* Define the navigation links style */
+      .nav-link {
+        font-size: 18px;
+        text-decoration: none;
+        margin-left: 20px;
+        color: #333333;
+        transition: color 0.3s ease;
+        font-weight: 700;
+      }
+  
+      /* Define the hover effect for the navigation links */
+      .nav-link:hover {
+        color: #666666;
+      }
+  
+
+      /* Footer */
+      footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        color: #666;
+      }

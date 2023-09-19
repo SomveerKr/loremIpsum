@@ -1,0 +1,73 @@
+<!-- Header -->
+<%- include('partials/header'); -%>
+
+<!-- Post -->
+
+<section class="post-section">
+    <div class="post-headings">
+        <div class="post-img">
+            <img src="../images/person.jpg" alt="">
+        </div>
+
+        
+        <!-- Headings displayed in this using JS -->
+        <div class="head-links-title"><em>In this article:</em></div>
+        <div id="heading-links">
+
+        </div>
+    </div>
+
+    <div class="post">
+        <h1 class="post-title">
+            <%= mainPost.postTitle %>
+        </h1>
+        
+        <!-- Id is for converting the content into pdf -->
+        <div id="article" class="post-content">
+            <% mainPost.headings.forEach(function(heading, index){ %>
+                <h2 id="post-heading<%= index + 1 %>"><%= heading %></h2>
+                <% const currentPostContent = mainPost.content[index] %>
+               <% if (typeof(currentPostContent) === "string") { %>
+                <p><%= currentPostContent %></p>
+               <% } else {%>
+                    <% const currentPostSubContent = currentPostContent.subContent %>
+                    <% const currentPostSubHeadings = currentPostContent.subHeadings %>
+                    <% currentPostSubHeadings.forEach((currentPostSubHeading, index) => {  %>
+                        <h3><%= currentPostSubHeading %></h3>
+
+                        <%const currentPostSubContentValue= currentPostSubContent[index] %>
+
+                        <% if (typeof(currentPostSubContentValue) === "string") { %>
+                            <p><%= currentPostSubContentValue %></p>
+                        <% } else {%>
+                            <% const orderedListTitles = currentPostSubContentValue.orderedListTitles %>
+                            <% const orderedListContent = currentPostSubContentValue.orderedListContent %>
+                            <ol>
+                                <% orderedListTitles.forEach((orderedListTitle, index) => { %>
+                                    <li><strong><%= orderedListTitle %>:</strong>
+                                        <Span><%= orderedListContent[index] %></Span>
+                                    </li>
+                                <%}); %>
+                            </ol>
+                            
+                        <% } %>
+                    <%})  %>
+                <% } %>
+                
+                
+
+              <% }); %>
+
+           
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Script for the title links of post -->
+<script src="/js/postLinkIndex.js"></script>
+<!-- footer -->
+<%- include('partials/footer'); -%>
