@@ -1,12 +1,15 @@
 .post-section{
     display: flex;
     flex-direction: row;
-    padding: 80px;
+    padding: 80px 0;
     gap: 50px;
 }
 
 .post-headings{
-    max-width: 500px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .post-img{
@@ -19,6 +22,11 @@
     object-fit: cover;
     border-radius: 10px;
 }
+.heading-links-box{
+    display: flex;
+    flex-direction: column;
+
+}
 .head-links-title{
     margin-top: 30px;
     margin-bottom: 15px;
@@ -29,6 +37,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    line-height: 25px;
     
 }
 #heading-links a{
@@ -50,4 +59,55 @@
     font-size: 3.2rem;
     margin-top: 0px;
     font-weight: 900;
+    line-height: 50px;
 }
+.post-content h2{
+    line-height:30px;
+}
+
+@media screen and (max-width:950px){
+    .post-section{
+        flex-direction: column;
+    }
+    .post-headings{
+        flex-direction: row;
+        width: 100%;
+        gap: 30px;
+
+    }
+    .post-img{
+        width: 300px;
+        height: 360px;
+    }
+  }
+
+  @media screen and (max-width:750px){
+
+    .post-headings{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+ 
+
+    }
+    .post-img{
+        width: 300px;
+        height: 360px;
+    }
+    .post-title{
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+    .post-content h2{
+        font-size: 1.7rem;
+        line-height:25px;
+    }
+  }
+
+  @media screen and (max-width:560px){
+
+    .post-title{
+        font-size: 2rem;
+        line-height: 30px;
+    }
+  }

@@ -1,9 +1,10 @@
+
+
  /* Define the body style */
  body {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-   
-   
+    flex-direction: column; 
     margin: 0 ;
     font-family: 'EB Garamond', serif;
     font-size: 21px;
@@ -11,7 +12,6 @@
     line-height: 1.5;
     color: #333333;
     font-weight: 400;
-    /* overflow-x: none; */
     box-sizing: border-box;
   }
 
@@ -20,22 +20,24 @@
       
       
       
-      /* Define the navigation style */
+ /* ----------- NAVBAR ----------------- */
       .nav {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        padding: 20px 80px;
+        padding: 30px 80px;
        
         background: #fff;
         transition: all ease .65s;
         z-index: 100;
         box-sizing: border-box;
       }
-      /* When page scrolls */
+      /* navbar changes When page scrolls */
       nav.scroll {
-        padding: 10px 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         position: fixed;
         width: 100%;
         
@@ -43,8 +45,24 @@
       .nav-logo{
         font-weight: 900;
         font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 30px;
       }
-
+      .nav-logo-the{
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-logo-the div {
+        background: #333333;
+        height: 2px;
+        width: 30px;
+      }
       .nav-items{
         display: flex;
         align-items: center;
@@ -69,7 +87,98 @@
       }
   
 
-      /* Footer */
+      
+ /* ------------------ For hamburger menu ----------------- */
+
+ .hamburgerMenu {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  width: 120px;
+  height: 60px;
+  background: #fff;
+  
+  display: none;
+  justify-content: space-between;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+  
+}
+
+.hamburgerMenu.active {
+  right: 0px;
+  width: 300px;
+  min-height: 420px;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+}
+.menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transform: translateY(-10px);
+  box-shadow: 0 10px #555;
+  transition: 0.5s;
+}
+
+.menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.hamburgerMenu.active .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 #555;
+}
+
+.hamburgerMenu.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.menu-items {
+  position: absolute;
+  width: 100%;
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  list-style: none;
+  background:  #fff;
+}
+
+.menu-items li{
+  padding: 10px 0;
+}
+
+
+/* main section of a page */
+main.main{
+  padding: 0 80px;
+}
+
+
+
+
+      /* ------------------ Footer ------------- */
       footer{
         display: flex;
         align-items: center;
@@ -77,4 +186,57 @@
         padding-top: 100px;
         padding-bottom: 60px;
         color: #666;
+      }
+
+
+
+      /* 
+      ---------------- Meadia quaries ---------------
+    */
+      @media screen and (max-width:1000px){
+        main.main{
+          padding: 0 60px; 
+        }
+        .nav{
+          padding: 30px 60px;
+        }
+        /* nav.scroll{
+          padding-top: 10px;
+          padding-bottom: 10px;
+        } */
+        .nav-items{
+          display: none;
+        }
+        .hamburgerMenu{
+          display: flex;
+          right: 0px;
+        }
+      }
+
+
+      @media screen and (max-width:600px){
+        main.main{
+          padding: 0 40px; 
+        }
+        .nav{
+          padding: 30px 40px;
+        }
+      }
+
+      @media screen and (max-width:500px){
+        main.main{
+          padding: 0 30px; 
+        }
+        .nav{
+          padding: 30px 30px;
+        }
+      }
+
+      @media screen and (max-width:400px){
+        main.main{
+          padding: 0 20px; 
+        }
+        .nav{
+          padding: 30px 20px;
+        }
       }

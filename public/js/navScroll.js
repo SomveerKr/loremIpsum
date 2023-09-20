@@ -9,3 +9,10 @@ window.addEventListener('scroll', function() {
     nav.classList.remove('scroll')
 
 });
+
+
+let menuToggle = document.querySelector(".menuToggle");
+let hamburgerMenu = document.querySelector(".hamburgerMenu");
+menuToggle.onclick = function () {
+  hamburgerMenu.classList.toggle("active");
+};

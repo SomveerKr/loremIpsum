@@ -6,7 +6,7 @@
   /* Mine */
   /* Hero section */
   .hero-section{
-    padding: 60px 80px;
+    padding: 60px 0;
     display: flex;
     flex-direction: row;
     gap: 30px; 
@@ -51,29 +51,27 @@
   }
 
   .divider-line{
-    padding: 0 80px;
     background: #222;
     height: 2px;
-    width: 77%;
-    margin-left: auto;
-    margin-right: auto;
-    
+    width: 100%;   
   }
 
-  /* Blogs section */
+  /* ------------------------- Blogs section --------------------------------- */
+
   .blogs-section{
-   display: flex;
-   flex-direction: row;
-   padding: 60px 80px;
-  justify-content: space-between;
-   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 0;
+    gap: 20px;
   }
+  
 
   .blog{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 360px;
+    width: 100%;
+    
   }
 
   .blog-img{
@@ -89,5 +87,45 @@
   }
 .blog-title{
   margin: 10px 0;
+  line-height: 35px;
+}
+.blog-text{
+  line-height: 25px;
 }
 
+
+/* --------------- Media quaries ---------------- */
+
+@media screen and (max-width:1000px){
+
+  .blogs-section{
+    padding: 60px 0;
+  }
+  .hero-section{
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width:870px){
+
+  .blogs-section{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-section{
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+  }
+}
+
+@media screen and (max-width:500px){
+ .blogs-section{
+  grid-template-columns: repeat(1, 1fr);
+ }
+
+ .hero-title{
+  font-size: 30px;
+ }
+
+}

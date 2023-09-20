@@ -1,18 +1,23 @@
 <!-- Header -->
 <%- include('partials/header'); -%>
 
-<!-- Post -->
+<!-- Main section for padding -->
+<main class="main">
 
+
+<!-- Post -->
 <section class="post-section">
     <div class="post-headings">
         <div class="post-img">
-            <img src="../images/person.jpg" alt="">
+            <img src="../images/person.jpg" alt="feature-img">
         </div>
 
         
         <!-- Headings displayed in this using JS -->
+        <div class="heading-links-box">
         <div class="head-links-title"><em>In this article:</em></div>
         <div id="heading-links">
+        </div>
 
         </div>
     </div>
@@ -25,7 +30,7 @@
         <!-- Id is for converting the content into pdf -->
         <div id="article" class="post-content">
             <% mainPost.headings.forEach(function(heading, index){ %>
-                <h2 id="post-heading<%= index + 1 %>"><%= heading %></h2>
+                <h2 id="post-heading<%= index + 1 %>"><%= heading %>:</h2>
                 <% const currentPostContent = mainPost.content[index] %>
                <% if (typeof(currentPostContent) === "string") { %>
                 <p><%= currentPostContent %></p>
@@ -66,7 +71,7 @@
 </section>
 
 
-
+</main>
 <!-- Script for the title links of post -->
 <script src="/js/postLinkIndex.js"></script>
 <!-- footer -->
